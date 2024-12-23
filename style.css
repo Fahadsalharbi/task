@@ -60,13 +60,12 @@ header {
     color: #000;
     font-weight: bold;
     text-align: center;
-    width: 100%;
+    width: 80%;
     left: 50%;
     transform: translateX(-50%);
     text-shadow: 1px 1px 2px #fff;
     direction: rtl;
 }
-
 #title-text {
     font-size: 22px;
     color: #01441b;
@@ -81,9 +80,33 @@ header {
 .controls {
     display: flex;
     flex-direction: column;
-    align-items: center; /* محاذاة الأزرار إلى المنتصف */
+    align-items: center; /* محاذاة النصوص والأزرار إلى المنتصف */
     margin-top: 15px;
+    gap: 15px; /* إضافة مسافة بين العناصر */
 }
+
+.text-formatting {
+    display: flexbox;
+    flex-wrap:wrap; /* لجعل الأزرار تنتقل للسطر التالي إذا كانت المساحة غير كافية */
+    justify-content: right; /* محاذاة العناصر أفقيًا في المنتصف */
+    text-align: right;
+    gap: 70px; /* مسافة بين الأزرار */
+    margin-bottom: 15px; /* مسافة بين الأزرار وزر الطباعة */
+    width: 400px; /* نفس عرض مربعات الإدخال */
+}
+
+.text-formatting select,
+.text-formatting input[type="number"],
+.text-formatting input[type="color"] {
+    padding: 8px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 14px; /* حجم الخط داخل الخيارات */
+    width: 100px; /* عرض موحد للعناصر */
+    text-align: center; /* محاذاة النصوص داخل الخيارات */
+    border: 1px solid #ddd; /* حدود خفيفة للعناصر */
+    border-radius: 5px; /* زوايا مستديرة */
+}
+
 
 input[type="text"] {
     padding: 8px;
@@ -134,7 +157,7 @@ button:active {
 
 /* إخفاء العناصر عند الطباعة */
 @media print {
-    #controls, header {
+    #controls, header, .text-formatting {
         display: none;
     }
 }
