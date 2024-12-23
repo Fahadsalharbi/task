@@ -34,3 +34,41 @@ function printImage() {
 // إضافة أحداث للتحديث الفوري للنص
 document.getElementById('title-input').addEventListener('input', updateText);
 document.getElementById('content-input').addEventListener('input', updateText);
+
+
+// JavaScript code to handle text formatting updates
+function updateTextAlignment() {
+    const alignment = document.getElementById("text-align").value;
+    const contentText = document.getElementById("content-text");
+    contentText.style.textAlign = alignment;
+}
+
+function updateFontSize() {
+    const fontSize = document.getElementById("font-size").value + "px";
+    const contentText = document.getElementById("content-text");
+    contentText.style.fontSize = fontSize;
+}
+
+function updateFontWeight() {
+    const fontWeight = document.getElementById("font-weight").value;
+    const contentText = document.getElementById("content-text");
+    contentText.style.fontWeight = fontWeight;
+}
+
+function updateTextColor() {
+    const textColor = document.getElementById("text-color").value;
+    const contentText = document.getElementById("content-text");
+    contentText.style.color = textColor;
+}
+
+function updateTextDecoration() {
+    const textDecoration = document.getElementById("text-decoration").value;
+    const contentText = document.getElementById("content-text");
+    contentText.style.textDecoration = textDecoration;
+}
+
+function updateFontStyle() {
+    const fontStyle = document.getElementById("font-style").value;
+    const contentText = document.getElementById("content-text");
+    contentText.style.fontStyle = fontStyle;
+}
